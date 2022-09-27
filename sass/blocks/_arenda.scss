@@ -1,0 +1,62 @@
+.arenda__inner>h2 {
+  font-family: 'Tenor Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+  text-align: center;
+  text-transform: uppercase;
+
+  span {
+    color: #CE946B;
+  }
+}
+
+.arenda__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arenda__item {
+  width: 300px;
+
+  h4 {
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 130px;
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 20px;
+    color: #34343F;
+    text-align: center;
+  }
+
+  p {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #34343F;
+  }
+}
+
+.arenda__item>img {
+  width: 100%;
+}
+
+.arenda__button{
+  display: block;
+  margin: 0 auto;
+  background-color: #CE946B;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}

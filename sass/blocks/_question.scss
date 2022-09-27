@@ -1,0 +1,127 @@
+.question {
+  padding: 50px 0px;
+  background: #363348;
+}
+
+.question__inner {
+  background-image: url('../../img/end-bg.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.wu {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.question__content {
+  h5 {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    margin: 0;
+    text-align: center;
+    color: #34343F;
+  }
+
+  p {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+    color: #34343F;
+  }
+
+  input {
+    display: block;
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+
+  .content__p {
+    text-align: start;
+    color: gray;
+    font-size: 12px;
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  .call {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 26px;
+    color: #34343F;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+
+.question__inner {
+  h2 {
+    max-width: 50%;
+    font-family: 'Tenor Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 58px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0 auto;
+
+    span {
+      color: rgba(206, 148, 107, 1);
+    }
+  }
+}
+
+.question__content {
+  width: 280px;
+  height: 480px;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #fff;
+  top: 200px;
+  left: 15%;
+  z-index: 10;
+}
+
+.doctor {
+  position: absolute;
+  width: 70%;
+  height: 590px;
+  top: 100px;
+  left: 25%;
+}
+
+@media (max-width: 800px) {
+  .doctor {
+    display: none;
+    position: absolute;
+    width: 70%;
+    top: 100px;
+    left: 25%;
+  }
+
+  .question__content {
+    width: 280px;
+    height: 480px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #fff;
+    top: 300px;
+    left: 0;
+  }
+}

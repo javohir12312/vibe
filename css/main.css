@@ -1,0 +1,796 @@
+* {
+  box-sizing: border-box;
+}
+* a {
+  text-decoration: none;
+  color: black;
+}
+* ul {
+  list-style: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  z-index: -1;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(204, 204, 204, 0.5);
+  z-index: 999;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.header__logo_name {
+  display: flex;
+  align-items: center;
+}
+.header__logo_name .header__name {
+  color: white;
+  width: 200px;
+  margin-left: 20px;
+}
+
+.logo_link {
+  padding-right: 10px;
+  border-right: 1px solid white;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header__item {
+  padding-bottom: 5px;
+}
+.header__item a {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.533333px;
+  color: white;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__right a {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 26px;
+  margin-right: 10px;
+  letter-spacing: -1.01538px;
+  color: white;
+}
+.header__right span {
+  color: rgb(233, 188, 155) rgb(204, 147, 107);
+  margin-left: 5px;
+}
+
+.ham {
+  display: none;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: -400px;
+  transition: 0.4s;
+  background-color: rgb(58, 51, 97);
+  padding: 20px;
+  border-end-end-radius: 10px;
+}
+
+.check {
+  display: none;
+}
+
+@media (max-width: 970px) {
+  .header__list {
+    display: none;
+  }
+  .ham {
+    display: block;
+  }
+  .check:checked + label {
+    display: block;
+    position: absolute;
+    left: 0px;
+  }
+  .header__right1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .hmbuger > span {
+    width: 33px;
+    height: 5px;
+    display: block;
+    background-color: black;
+    margin: 2px;
+    border-radius: 5px;
+  }
+  .header__right {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .header__name {
+    display: none;
+  }
+  .header__name2 {
+    color: white;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+}
+.hero {
+  margin-top: -20px;
+  padding: 100px;
+  background-image: url("../../img/hero-bg.png");
+  background-size: 1400px 100%;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+}
+.hero h2 {
+  color: white;
+  max-width: 400px;
+  margin-left: 50px;
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 38px;
+}
+.hero h2 span {
+  color: rgb(206, 148, 107);
+}
+.hero p {
+  max-width: 400px;
+  margin-left: 50px;
+  color: white;
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+}
+.hero form {
+  margin-left: 50px;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.hero form input {
+  border-radius: 5px;
+  padding: 10px 30px;
+  border: none;
+}
+.hero form button {
+  background-color: rgb(206, 148, 107);
+  padding: 20px 20px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 10px;
+  color: white;
+  font-family: "TT Norms";
+  font-style: normal;
+  width: 250px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+@media (max-width: 580px) {
+  .hero {
+    margin-top: 0px;
+    padding: 40px 0px;
+    background-image: url("../../img/hero-bg.png");
+    background-size: 1400px 100%;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+  }
+  .hero h2 {
+    color: white;
+    max-width: 200px;
+    font-family: "Tenor Sans";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .hero h2 span {
+    color: rgb(206, 148, 107);
+  }
+  .hero p {
+    max-width: 400px;
+    color: white;
+    font-family: "TT Norms";
+    font-style: normal;
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .hero form {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+  }
+  .hero form input {
+    border-radius: 5px;
+    padding: 10px 30px;
+    border: none;
+  }
+  .hero form button {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(206, 148, 107);
+    padding: 20px 20px;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    color: white;
+    font-family: "TT Norms";
+    font-style: normal;
+    max-width: 230px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
+.footer__inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.footer__item-num {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer__item-num a {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #34343F;
+  margin-left: 10px;
+}
+
+.footer__item {
+  margin: 5px;
+}
+
+.arenda__inner > h2 {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 58px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.arenda__inner > h2 span {
+  color: #CE946B;
+}
+
+.arenda__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arenda__item {
+  width: 300px;
+}
+.arenda__item h4 {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 130px;
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 20px;
+  color: #34343F;
+  text-align: center;
+}
+.arenda__item p {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #34343F;
+}
+
+.arenda__item > img {
+  width: 100%;
+}
+
+.arenda__button {
+  display: block;
+  margin: 0 auto;
+  background-color: #CE946B;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+.what {
+  background-image: url("../../img/flowers.png");
+  background-repeat: no-repeat;
+  background-position: calc(50% - 600px) 0px;
+}
+
+.what__inner {
+  position: relative;
+}
+
+.what__inner::after {
+  content: url("../../img/key.png");
+  position: absolute;
+  top: 80%;
+  left: -220px;
+}
+
+.what__inner::before {
+  content: url("../../img/coffee.png");
+  position: absolute;
+  top: 55%;
+  right: 0;
+}
+
+.what__inner > h2 {
+  text-align: center;
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.what__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.what__list {
+  width: 300px;
+  margin: 0px;
+}
+
+.what__item > p {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #34343F;
+}
+
+.what__item > button {
+  margin-top: -10px;
+  padding: 18px 110px;
+  background-color: rgb(233, 233, 233);
+  border: none;
+  border-radius: 5px;
+}
+
+.masha {
+  width: 100%;
+}
+
+.what__item > h4 {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #34343F;
+}
+
+.cta {
+  background-color: #34343F;
+  padding: 100px 0px;
+}
+
+.cta {
+  background-image: url("../../img/cta-1-after.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-size: 1200px;
+  background-position: calc(50% + 300px) 450px;
+}
+
+.cta__inner {
+  position: relative;
+}
+
+.cta__inner::before {
+  content: url(../../img/cta-before.png);
+  position: absolute;
+  top: 500px;
+  left: -20px;
+}
+
+.cta__contanet_top {
+  background-color: #fff;
+  padding: 100px 50px;
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 20px;
+}
+
+.cta__content_inner {
+  width: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cta__content_inner > a {
+  width: 220px;
+}
+
+.cta__content_inner > a > img {
+  width: 220px;
+}
+
+.cta__all_text {
+  margin: 0;
+}
+
+.cta__all_text h4 {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.cta__all_text h6 {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.cta__list {
+  padding: 0px;
+}
+
+.cta__item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 25px 0px;
+  padding: 0;
+}
+
+.cta__button {
+  background-color: #CE946B;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.cta__inner h2 {
+  max-width: 600px;
+  margin: 30px auto;
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  margin-top: 100px;
+}
+.cta__inner h2 span {
+  color: #CE946B;
+}
+
+.cta__contanet_bottom {
+  background-color: #fff;
+  padding: 100px 50px;
+  max-width: 1000px;
+  display: flex;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-top: 50px;
+  z-index: -1;
+}
+
+.cta__contanet_bottom::before {
+  content: url("../../img/bodom-top.svg");
+  position: absolute;
+  top: 53%;
+  left: 100px;
+}
+
+.cta__contanet_bottom::after {
+  content: url("../../img/bodom.svg");
+  position: absolute;
+  top: 55%;
+  left: 70%;
+}
+
+.cta__end {
+  margin-top: 100px;
+  margin-left: 50px;
+  width: 300px;
+  border-radius: 20px;
+  padding: 30px 30px;
+  background-color: #fff;
+}
+
+.end {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.cta__girl {
+  max-width: 600px;
+  margin-left: -400px;
+}
+
+@media (max-width: 1100px) {
+  .cta__contanet_top {
+    flex-wrap: wrap;
+  }
+  .cta__content_inner {
+    margin: 0 auto;
+    width: 100%;
+  }
+  .cta__all_text {
+    margin: 0 auto;
+  }
+  .cta__contanet_bottom {
+    display: block;
+  }
+}
+@media (max-width: 900px) {
+  .cta__contanet_bottom::before {
+    content: "";
+    position: absolute;
+    top: 53%;
+    left: 100px;
+  }
+  .cta__contanet_bottom::after {
+    content: "";
+    position: absolute;
+    top: 85%;
+    left: 70%;
+  }
+  .cta__girl > img {
+    width: 250px;
+  }
+  .cta__girl {
+    width: 280px;
+    margin-left: 0;
+  }
+}
+.why {
+  background-image: url("../../img/why-after.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: calc(50% + 500px) 100px;
+}
+
+.why__inner h2 {
+  text-align: center;
+  max-width: 700px;
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 58px;
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: #34343F;
+}
+.why__inner h2 span {
+  color: rgb(206, 148, 107);
+}
+
+.why__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+.why__item {
+  width: 250px;
+  margin: 0 auto;
+}
+.why__item h5 {
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 0;
+  color: #34343F;
+}
+.why__item p {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  color: #34343F;
+}
+
+.why__button {
+  background-color: #CE946B;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  color: white;
+  margin: 20px auto;
+}
+
+.question {
+  padding: 50px 0px;
+  background: #363348;
+}
+
+.question__inner {
+  background-image: url("../../img/end-bg.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.wu {
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.question__content h5 {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+  color: #34343F;
+}
+.question__content p {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  text-align: center;
+  color: #34343F;
+}
+.question__content input {
+  display: block;
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+.question__content .content__p {
+  text-align: start;
+  color: gray;
+  font-size: 12px;
+  width: 200px;
+  margin: 0 auto;
+}
+.question__content .call {
+  font-family: "TT Norms";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 26px;
+  color: #34343F;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.question__inner h2 {
+  max-width: 50%;
+  font-family: "Tenor Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 58px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0 auto;
+}
+.question__inner h2 span {
+  color: rgb(206, 148, 107);
+}
+
+.question__content {
+  width: 280px;
+  height: 480px;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  background-color: #fff;
+  top: 200px;
+  left: 15%;
+  z-index: 10;
+}
+
+.doctor {
+  position: absolute;
+  width: 70%;
+  height: 590px;
+  top: 100px;
+  left: 25%;
+}
+
+@media (max-width: 800px) {
+  .doctor {
+    display: none;
+    position: absolute;
+    width: 70%;
+    top: 100px;
+    left: 25%;
+  }
+  .question__content {
+    width: 280px;
+    height: 480px;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    background-color: #fff;
+    top: 300px;
+    left: 0;
+  }
+}/*# sourceMappingURL=main.css.map */

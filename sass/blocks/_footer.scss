@@ -1,0 +1,27 @@
+.footer__inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.footer__item-num {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  a {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #34343F;
+    margin-left: 10px;
+  }
+}
+
+.footer__item{
+  margin: 5px;
+}

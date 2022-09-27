@@ -1,0 +1,73 @@
+.what{
+  background-image: url('../../img/flowers.png');
+  background-repeat: no-repeat;
+  background-position: calc(50% - 600px)  0px;
+}
+
+.what__inner{
+  position: relative;
+}
+
+.what__inner::after{
+  content: url('../../img/key.png');
+  position: absolute;
+  top: 80%;
+  left: -220px;
+}
+
+.what__inner::before{
+  content: url('../../img/coffee.png');
+  position: absolute;
+  top: 55%;
+  right: 0;
+}
+
+.what__inner>h2 {
+  text-align: center;
+  font-family: 'Tenor Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.what__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.what__list {
+  width: 300px;
+  margin: 0px;
+}
+
+.what__item>p {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: #34343F;
+}
+
+.what__item>button{
+  margin-top: -10px;
+  padding: 18px 110px;
+  background-color: rgb(233, 233, 233);
+  border: none;
+  border-radius: 5px;
+}
+
+.masha{
+  width: 100%;
+}
+
+.what__item>h4 {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #34343F;
+}

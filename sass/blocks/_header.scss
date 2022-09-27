@@ -1,0 +1,143 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(204, 204, 204, 0.5);
+  z-index: 999;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.header__logo_name {
+  display: flex;
+  align-items: center;
+
+  .header__name {
+    color: white;
+    width: 200px;
+    margin-left: 20px;
+  }
+}
+
+.logo_link {
+  padding-right: 10px;
+  border-right: 1px solid white;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header__item {
+  a {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.533333px;
+    color: white;
+  }
+
+  padding-bottom: 5px;
+}
+
+.header__right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    font-family: 'TT Norms';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 26px;
+    margin-right: 10px;
+    letter-spacing: -1.01538px;
+    color: white;
+  }
+
+  span {
+    color: rgba(233, 188, 155, 1) rgba(204, 147, 107, 1);
+    margin-left: 5px;
+  }
+}
+
+.ham {
+  display: none;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: -400px;
+  transition: 0.4s;
+  background-color: rgb(58, 51, 97);
+  padding: 20px;
+  border-end-end-radius: 10px;
+}
+
+
+
+.check {
+  display: none;
+}
+
+@media (max-width: 970px) {
+  .header__list {
+    display: none;
+  }
+
+  .ham {
+    display: block;
+  }
+
+  .check:checked+label {
+    display: block;
+    position: absolute;
+    left: 0px;
+  }
+
+  .header__right1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hmbuger>span {
+    width: 33px;
+    height: 5px;
+    display: block;
+    background-color: black;
+    margin: 2px;
+    border-radius: 5px;
+  }
+
+  .header__right {
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 400px) {
+  .header__name {
+    display: none;
+  }
+
+  .header__name2 {
+    color: white;
+    width: 200px;
+    display: block;
+    margin: 0 auto;
+  }
+}
